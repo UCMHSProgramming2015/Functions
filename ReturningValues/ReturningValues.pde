@@ -4,7 +4,7 @@ void setup() {
 }
 
 void draw() {
-  drawACircle();
+  drawATri();
  
   }
   
@@ -12,8 +12,8 @@ void draw() {
 
 
 
-void drawACircle() {
+void drawATri() {
   float d = 30;
   fill(random(0,255),random(0,255),random(0,255));
-  ellipse(mouseX,mouseY, d, d);
+  triangle(random(0,800), random(0,600), random(0,800), random(0,600), random(0,800), random(0,600));
 }
