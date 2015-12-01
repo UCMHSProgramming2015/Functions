@@ -5,6 +5,7 @@ void setup() {
 }
 
 void draw() {
+  background(255);
   drawBlueSquare();
   drawMouseLocationwithD30(color(100,150,200));
   drawRectangle(10,20);
