@@ -5,8 +5,7 @@ void setup() {
 
 void draw() {
   drawACircle();
-  if(mousePressed){
-  }
+ 
   }
   
 
