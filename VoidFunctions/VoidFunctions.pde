@@ -54,14 +54,14 @@ void drawADuck() {
 
   //Movement
   if (loc.x>= width) {
-    vel.x = -abs(vel.x);    //if the ball hits the right wall, assign x velocity the negative version of itself
+    vel.x = -abs(vel.x);   
   } else if (loc.x <= 0) {
-    vel.x = abs(vel.x);     //if the ball hits the left wall, assign x velocity the positive version of itself
+    vel.x = abs(vel.x);     
   }
   if (loc.y >= height) {
-    vel.y = -abs(vel.y);    //if the ball hits the right wall, assign x velocity the negative version of itself
+    vel.y = -abs(vel.y);    
   } else if (loc.y <= 0) {
-    vel.y = abs(vel.y);     //if the ball hits the left wall, assign x velocity the positive version of itself
+    vel.y = abs(vel.y);     
   }
 }
 
