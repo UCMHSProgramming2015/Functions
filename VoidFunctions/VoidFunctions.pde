@@ -19,6 +19,19 @@ void drawBlueSquare(){
 void drawMouseCircle(){
 float diam = random(10,30);
 noStroke();
-fill(random(0,255), random(0,255), random(0,255),random(90,100));
+setFill();
 ellipse(mouseX,mouseY, diam, diam);
+}
+
+void setFill(){
+  float r; 
+  float g; 
+  float b;
+  float transparency;
+  r = random(0,255);
+  g = random(0,255);
+  b = random(0,255);
+  transparency = random(50,150);
+  fill(r, g, b,transparency);
+ 
 }
