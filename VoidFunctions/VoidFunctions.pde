@@ -4,8 +4,8 @@ background(0);
 }
 
 void draw(){
-
-  drawBlueSquare();
+drawRandomRect();
+drawBlueSquare();
 drawMouseCircle();
 }
 
@@ -33,5 +33,13 @@ void setFill(){
   b = random(0,255);
   transparency = random(50,150);
   fill(r, g, b,transparency);
- 
+}
+
+void drawRandomRect(){
+ if(mousePressed){
+ float leng = random(10,40);
+ float wid = random(10,40);
+ noStroke();
+ rect(random(width), random(height), leng, wid);
+ }
 }
