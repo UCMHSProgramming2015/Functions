@@ -18,7 +18,7 @@ void draw() {
 }
 
 void drawABlueSquare() {
-  fill(180, 203, 207, 60);
+  fill(5, 227, 255, 80);
   rect(width/2, height/2, 50, 50);
 }
 
