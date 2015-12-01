@@ -2,9 +2,7 @@ float a, b, c;
 PImage asoue;
 void setup() {
   size(800, 600);
-  a=0;
-  b=0;
-  c=0;
+  
   asoue = loadImage("asoue.jpg");
 }
 
@@ -21,16 +19,17 @@ void drawabluesquare() {
 }
 
 void drawacircle() {
-  fill(a, b, c);
-  ellipse(mouseX, mouseY, 30, 30); 
-  if (mousePressed) {
-    a=random(255);
-    b=random(255);
-    c=random(255);
-  }
+  setfill(40,195,255);
+ ellipse(mouseX, mouseY, 30, 30); 
+ 
+  
 }
 
 void drawanimage(float x, float y) {
   
   image(asoue, x,y);
+}
+
+void setfill(float r, float g, float b){
+ fill(r,g,b); 
 }
