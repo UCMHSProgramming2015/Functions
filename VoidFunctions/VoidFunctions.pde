@@ -1,11 +1,13 @@
+int weight = 2;
 float x;
 float y;
-float diam;
+float diam = 10;
 int total = 50;
 PVector [] lag = new PVector[total];
 
 void setup() {
   size(500, 500);
+  strokeWeight(weight);
   for (int i = 0; i < total; i++) {
     lag[i] = new PVector(-100, -100);
   }
@@ -28,17 +30,16 @@ void draw() {
   background(0);
   x = mouseX;
   y = mouseY;
-  diam = 30;
   stroke(255);
   square(255, 255, 255, 128);
   noFill();
   for (int i = 0; i < total-1; i++) {
     lag[i].set(lag[i+1]);
   }
-  lag[total-1].set(x,y);
+  lag[total-1].set(x, y);
   for (int i = 0; i < total; i++) {
     stroke(255, 255*i/(total-1));
-    ellipse(lag[i].x, lag[i].y, diam, diam);
+    ellipse(lag[i].x, lag[i].y, diam+weight*(total-1-i), diam+weight*(total-1-i));
   }
   circle(x, y, diam, 255, 0, 0, 128);
 }
