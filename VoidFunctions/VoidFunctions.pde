@@ -8,6 +8,7 @@ void draw() {
   if (mousePressed) {    // If mouse pressed add circles at mouse locaion
     drawCircleAt();
   }
+  blueSquare();
 }
 
 void keyPressed() {
@@ -34,4 +35,10 @@ void drawCircleAt() {    //Define a function that draws circles where mouse is l
 
 void resetScreen() {    //Defines funcion that redraws the background
   background(255, 102, 255);
+}
+
+void blueSquare(){  //Defines function that draws blue square at location  
+  fill(0,0,255,100);
+  float sz = 40;
+  rect(width/2-sz,height/2-sz,sz,sz);
 }
