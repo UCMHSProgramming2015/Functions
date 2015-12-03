@@ -5,12 +5,13 @@ void setup() {
 }
 
 void draw() {
-    println(hypotenuse(5,12));
+  float d = add3(1,2,3);
+    println(d);
 
 }
 
 
-float hypotenuse(float a, float b){
-   float c=sqrt(sq(a) + sq(b));
-   return(c);
+float add3(float a, float b,float c){
+   float d=  a + b + c ;
+   return d;
 }
