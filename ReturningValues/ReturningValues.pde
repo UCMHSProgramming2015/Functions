@@ -2,28 +2,36 @@
 
 //void setup(){
   
-//}
 
-//void draw(){
+/*************************************************
+}
 
-//println(hypot(5,12));
 
-//}
+//pythagorean theorem
 
-//float hypot(float a, float b){                            //pyhthagorean theorem
-//float c = sqrt(sq(a) + sq(b)); 
-//return c; //
-//}
+void draw(){
 
-/**************************
-c = square root of (a squared +b squared)
-sqrt(num);
-sq(num);
-**********************/
+  println(hypot(5,12));  //write a new line each frame of the hypot function with values 5 and 12 for a and b
+
+}
+
+float hypot(float a, float b){     //float new function with variables a and b                     
+float c = sqrt(sq(a) + sq(b));     //pythagorean theorem
+return c;                          //repeat
+}
+
+
+//c = square root of (a squared +b squared)
+//sqrt(num);
+//sq(num);
+
+
+
+
+**********************************/
 
 
 //add three values together
-
 void setup(){
   
   
