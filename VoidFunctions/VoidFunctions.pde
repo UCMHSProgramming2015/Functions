@@ -6,7 +6,7 @@ void setup() {
 void draw() {
   drawRandomCircle();  //Add circles at random parts of program
   if (mousePressed) {    // If mouse pressed add circles at mouse locaion
-    drawCircleAt();
+    drawCircleAt(105,0,200);
   }
   blueSquare();
 }
@@ -23,12 +23,12 @@ void keyPressed() {
 void drawRandomCircle() {    //Define drawing random cirlce function
   noStroke();
   fill(255);
-  float sz = random(10, 45);
+  float sz = 30;
   ellipse(random(width), random(height), sz, sz);
 }
 
-void drawCircleAt() {    //Define a function that draws circles where mouse is located
-  fill(150, 102, 255);
+void drawCircleAt(int r, int g, int b) {    //Define a function that draws circles where mouse is located
+  fill(r,g,b);
   float sz = random(20, 25);
   ellipse(mouseX, mouseY, sz, sz);
 }
