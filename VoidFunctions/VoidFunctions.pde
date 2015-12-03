@@ -14,6 +14,9 @@ void keyPressed() {
   if (keyCode == BACKSPACE) {    //Creates a blank screen
     resetScreen();
   }
+  if (keyCode==ESC) {    //Adds a way to close program
+    exit();
+  }
 }
 
 void drawRandomCircle() {    //Define drawing random cirlce function
