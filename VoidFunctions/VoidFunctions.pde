@@ -4,10 +4,10 @@ void setup(){
 }
 
 void draw(){
-  drawCircleAt();
+  drawRandomCircle();
 }
 
-void drawCircleAt(){
+void drawRandomCircle(){
   noStroke();
   fill(255);
   float sz = random(10,45);
