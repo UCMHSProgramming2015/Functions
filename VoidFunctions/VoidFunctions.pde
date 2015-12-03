@@ -10,8 +10,9 @@ void drawBlueSquare(){
   rect(width/2, height/2, sz, sz);
 }
 
-void drawMouseEllipse(){
+void drawMouseEllipse(color userColor){
   float sz = 30;
+  fill(userColor);
   ellipse(mouseX, mouseY, sz, sz);
 }
 
@@ -22,9 +23,8 @@ void drawRedTriangle(){
 
 void draw(){
   drawBlueSquare();
-  drawMouseEllipse();
+  drawMouseEllipse(color(30, 150, 90));
   if (mousePressed == true){
     drawRedTriangle();
   }
-
 }
