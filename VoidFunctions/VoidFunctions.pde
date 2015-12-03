@@ -46,5 +46,4 @@ void drawIceCreamAt(float i, float j){
 
 void mousePressed(){
   gameMode=1;
-
 }
