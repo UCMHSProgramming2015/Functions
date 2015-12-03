@@ -2,6 +2,8 @@
 PImage derp;
 PImage icecream;
 float gameMode;
+float i;
+float j;
 
 void setup() {
   //set canvas size
@@ -11,6 +13,8 @@ void setup() {
   derp = loadImage("newderp.png");
   icecream = loadImage("icecream.png");
 
+  i = random(width)-37.5;
+  j = random(height)-50;
   gameMode=0;
 }
 
@@ -24,7 +28,7 @@ void draw() {
     text("Help Kanye reach his true love",80,height/2);
   }
     if (gameMode==1) {
-     drawIceCreamAt(random(width),random(height));
+     drawIceCream();
      drawKanyeAt(mouseX-400,mouseY-300);
   }
 }
@@ -37,14 +41,11 @@ void drawKanyeAt(float x, float y) {
   derp.resize(400,300);
 }
 
-void drawIceCreamAt(float i, float j){
-  i = random(width)-37.5;
-  j = random(height)-50;
+void drawIceCream(){
   image(icecream, i, j);
   icecream.resize(75,100);
 } 
 
 void mousePressed(){
   gameMode=1;
-
 }
