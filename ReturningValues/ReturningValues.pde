@@ -2,10 +2,10 @@ void setup() {
 }
 
 void draw() {
-println(Hypotenuse(5,12));
+println(Sum(5,12,15));
 }
 
-float Hypotenuse(float a, float b){
-float c = sqrt(sq(a) + sq(b));
-return c;
+float Sum(float a, float b, float c){
+float d = a + b + c;
+return d;
 }
