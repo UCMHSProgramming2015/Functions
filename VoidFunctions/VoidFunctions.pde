@@ -1,4 +1,3 @@
-
 void setup() {
   //your setup code is here
   size(1600, 1200);
@@ -6,6 +5,18 @@ void setup() {
 
 void draw() {
   blueSquare();
+  circleAtMouse(255, 200, 5);
+  for (int i = 0; i < height; i += 20) {
+    drawACircleAt(mouseX, i, 15);
+  }
+}
+void drawACircleAt(float x, float y, float d) {
+  ellipse(x, y, d, d);
+}
+
+void circleAtMouse(float red, float green, float blue) {
+  fill(red, green, blue);
+  ellipse(mouseX, mouseY, 100, 100);
 }
 
 void blueSquare() {
