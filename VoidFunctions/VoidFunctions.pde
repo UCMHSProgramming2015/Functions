@@ -4,6 +4,7 @@ void setup() {
 
 void draw() {
   background(242, 250, 240); //draws bg with super light green bg
+  println(add(3, 2)); 
   drawsquare(); //draw square
   drawcircle(random(191), random(232), random(181)); //calls on drawcircle function
   flyingball(random(width), random(height), 20, 3, 6);
@@ -25,4 +26,9 @@ void flyingball (float x, float y, float d, float velx, float vely) {
   ellipse(x, y, d, d); //draw ellipse
   x += velx; // ives ball velocity
   y += vely; //gives ball velocity
+}
+
+int add(int x, int y) { //addition function
+  int c = x + y; 
+  return c; //gives out c
 }
