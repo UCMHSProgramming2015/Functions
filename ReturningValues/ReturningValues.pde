@@ -1,23 +1,24 @@
-float theta = 0;
-float thetaStart = 0;
-float circleSize = 100;
-
+float number;
+float variable = 20;
 void setup() {
-  colorMode(HSB, 360, 100, 100, 100);
-  size(2800, 1200);
+  size(2000, 1000);
 }
 
 void draw() {
-  theta = thetaStart;
-  background(0, 0, 100);
-  stroke(3);
-  println(sin(theta));
-  for (int x = 0; x < width; x += circleSize - 20) {
-    noStroke();
-    fill(map(x, 0, width, 0, 360), 100, 100, 50);
-    float y = map(sin(theta), -1, 1, height*.25, height*.75);
-    ellipse(x, y, circleSize, circleSize);
-    theta += .3;
-  }
-  thetaStart += .005;
+  //println(divideByTwo(84));
+
+  ellipse(mouseX, mouseY, findTheHypotenuse(120, 240), findTheHypotenuse(5, 12));
+  println(findTheHypotenuse(50, 120));
+}
+
+
+
+float divideByTwo(float input) {
+  float result = input/2;
+  return result;
+}
+
+float findTheHypotenuse(float a, float b) {
+  float c = sqrt(sq(a) + sq(b));
+  return c;
 }
