@@ -12,9 +12,10 @@ void setup() {
   //load image
   derp = loadImage("newderp.png");
   icecream = loadImage("icecream.png");
-
-  i = random(width)-37.5;
-  j = random(height)-50;
+  
+  //set ice cream location and game mode
+  i = random(37.5, width - 37.5)-37.5;
+  j = random(50, height - 50)-50;
   gameMode=0;
 }
 
@@ -22,18 +23,25 @@ void draw() {
   //create background
   background(300,300,300);
   
+  //initiate game if user clicks
   if(gameMode==0){
     fill(0);
     textSize(30);
     text("Help Kanye reach his true love",80,height/2);
   }
     if (gameMode==1) {
-     drawIceCream();
      drawKanyeAt(mouseX-400,mouseY-300);
+     drawIceCream();
+  }
+  
+  if(mouseX <= i + 37.5 && mouseX >= i - 37.5){
+    if(mouseY <= j + 50 && mouseY >= j - 50){
+    drawIceCream();
+    }
   }
 }
 
-
+//draw Kanye where cursor is
 void drawKanyeAt(float x, float y) {
   x = mouseX-200;
   y = mouseY-150;
@@ -41,11 +49,13 @@ void drawKanyeAt(float x, float y) {
   derp.resize(400,300);
 }
 
+//generate random ice cream 
 void drawIceCream(){
   image(icecream, i, j);
   icecream.resize(75,100);
 } 
 
 void mousePressed(){
+  //initiate game when user clicks
   gameMode=1;
 }
