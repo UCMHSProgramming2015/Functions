@@ -1,6 +1,9 @@
 void setup() {
   size(800, 600);
   noStroke();
+  frameRate(1000000000);
+  textAlign(CENTER,CENTER);
+  textSize(20);
 }
 
 void draw() {
@@ -21,7 +24,7 @@ void mouseCircles(float r, float g, float b) {
     ellipse(mouseX, mouseY, 30, 30);
   }
 }
-
+ 
 void keyText(){
   if(keyPressed){
     fill(0);
