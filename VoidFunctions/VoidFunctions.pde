@@ -1,15 +1,16 @@
 
 void setup() {
   //your setup code is here
-  size(800, 600);
-  noStroke();
+  size(1600, 1200);
 }
 
 void draw() {
-  drawARandomCircle();
-  if (mousePressed) {
-    drawACircleAt(mouseX, mouseY);
-  }
+  blueSquare();
+}
+
+void blueSquare() {
+  fill(0, 100, 255);
+  rect(width/2, height/2, 100, 100);
 }
 
 
