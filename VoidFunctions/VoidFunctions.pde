@@ -43,8 +43,8 @@ void draw() {
 
 //draw Kanye where cursor is
 void drawKanyeAt(float x, float y) {
-  x = mouseX-200;
-  y = mouseY-150;
+  x = mouseX-170;
+  y = mouseY-190;
   image(derp, x, y);
   derp.resize(400,300);
 }
