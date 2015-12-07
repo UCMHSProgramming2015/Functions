@@ -1,10 +1,7 @@
 //Declare variables
 float x, y, varx, vary, timer; 
-<<<<<<< HEAD
 boolean trigger = false; //sets when a certain  
-=======
-boolean trigger = false; 
->>>>>>> refs/remotes/origin/returning-functions
+
 
 void setup () {
   background(0);
