@@ -1,13 +1,8 @@
-
-void setup() {
-  size(800, 600);
-}
-
 void draw() {
-  CtoK()
-
+  println(findKelvin(25));
 }
-float CtoK(float C){
-  
 
+float findKelvin (float celsius){
+  float kelvin= celsius+273;
+  return kelvin;
 }
